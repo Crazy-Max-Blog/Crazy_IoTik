@@ -2,7 +2,8 @@
 IoTik_motor motors(0x70);
 
 void setup() {
- motors.begin(100); // Инициализация драйвера
+ motors.begin(5, 23); // Инициализация драйвера с указанием пинов в скобках 
+ motors.setPWMFreq(100);
 }
 
 void loop() {
